@@ -1,5 +1,7 @@
 FROM gitpod/workspace-full:latest
 
+USER gitpod
+
 # Angular CLI
 RUN npm i -g @angular/cli
 

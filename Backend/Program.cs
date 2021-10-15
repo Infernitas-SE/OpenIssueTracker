@@ -1,13 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using System.Net;
 
-namespace OpenIssueTracker
+namespace InfernitasSE.Projects.OpenIssueTracker.Backend
 {
     public class Program
     {
@@ -20,6 +15,10 @@ namespace OpenIssueTracker
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    webBuilder.UseKestrel(options =>
+                    {
+                        options.Listen(IPAddress.Loopback, 5080); //HTTP port
+                    });
                     webBuilder.UseStartup<Startup>();
                 });
     }

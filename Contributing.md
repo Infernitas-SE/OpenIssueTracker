@@ -21,10 +21,10 @@ Open-Source Issue Tracker. ASP.Net Core Backend, Angular Frontend.
         - `@oliverkarger/fix-2-test`
         - `@oliverkarger/feature-1-refactoring`
     - Terminology
-        - fix = fix a bug
-        - feature = something new
-        - refactoring = redo a existing feature / function
-        - develop = make something new
+        - *fix* = fix a Bug
+        - *feature* = some new Feature. 
+        - *refactoring* = redo a existing Feature or improve a existing Function/Process
+        - *develop* = develop something new
     - A *Fix* is usually *refactoring*, you're not developing something new, your fixing something already existing
     - A *Feature* is usually *develop*, you're probably developing something new unless you're improving a existing one.  
 4. Once you're done, create a merge request

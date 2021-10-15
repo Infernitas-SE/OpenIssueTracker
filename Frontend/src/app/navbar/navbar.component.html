@@ -1,0 +1,12 @@
+<mat-toolbar color="primary" class="navbar">
+    <mat-toolbar-row>
+        <h1>SimpleCRM</h1>
+        <span class="menu-spacer"></span>
+        <div>
+            <a mat-button (click)='this.routerService.navigate(["dashboard"])'> Dashboard </a>
+            <a mat-button (click)='this.routerService.navigate(["issues"])'> Issues </a>
+            <a mat-button (click)='this.routerService.navigate(["users"])'> Users </a>
+            <a mat-button (click)='this.routerService.navigate(["management"])'> Management </a>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>

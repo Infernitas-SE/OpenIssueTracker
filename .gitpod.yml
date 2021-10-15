@@ -1,2 +1,10 @@
 image:
   file: .gitpod.Dockerfile
+
+vscode:
+  extensions:
+    - muhammad-sammy.csharp
+    - esbenp.prettier-vscode
+    - fileicons.file-icons
+    - akamud.vscode-theme-onedark
+  

@@ -48,11 +48,14 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { NavbarComponent } from './navbar/navbar.component';
+import { LoginViewComponent } from './login-view/login-view.component';
+import { SecurityService } from './security-service.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    LoginViewComponent
   ],
   imports: [
     BrowserModule,
@@ -95,7 +98,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     MatSortModule,
     MatTableModule
   ],
-  providers: [Title],
+  providers: [Title, SecurityService],
   bootstrap: [AppComponent],
   exports: [
     MatAutocompleteModule,

@@ -1,17 +1,27 @@
-using Microsoft.EntityFrameworkCore;
-using InfernitasSE.Projects.OpenIssueTracker.Backend.Models;
-
 namespace InfernitasSE.Projects.OpenIssueTracker.Backend.Database
 {
-    public class MsSqlContext : DbContext 
+    using Microsoft.EntityFrameworkCore;
+
+    /// <summary>
+    /// Microsoft SQL Database Context
+    /// </summary>
+    public class MsSqlContext : DbContext
     {
+        /// <summary>
+        /// Constructor. 
+        /// </summary>
+        public MsSqlContext() { }
 
-        public DbSet<User> Users { get; set; }
+        /// <summary>
+        /// Model Configurator
+        /// </summary>
+        /// <param name="optionsBuilder"></param>
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) { }
 
-        public MsSqlContext(){}
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){}
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder){}
+        /// <summary>
+        /// Model Creator
+        /// </summary>
+        /// <param name="modelBuilder"></param>
+        protected override void OnModelCreating(ModelBuilder modelBuilder) { }
     }
 }

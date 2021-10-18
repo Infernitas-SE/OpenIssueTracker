@@ -1,10 +1,23 @@
 namespace InfernitasSE.Projects.OpenIssueTracker.Backend.Models
 {
-    public class User
+    /// <summary>
+    /// User-Model.
+    /// </summary>
+    public class User : TableModel
     {
-        public int ID { get; set; }
+        /// <summary>
+        /// Username. (LDAP IAM)
+        /// </summary>
         public string Username { get; set; }
+
+        /// <summary>
+        /// Name. 
+        /// </summary>
         public string Name { get; set; }
+
+        /// <summary>
+        /// Surname.
+        /// </summary>
         public string Surname { get; set; }
     }
 }

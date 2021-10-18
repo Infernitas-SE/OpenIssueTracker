@@ -1,0 +1,36 @@
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark elegant-color-dark" [containerInside]="false">
+    <mdb-navbar-brand><a class="navbar-brand" href="#">IssueTracker</a></mdb-navbar-brand>
+    <links *ngIf="this.securityService.isSignedIn()">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link waves-light" mdbWavesEffect>Dashboard<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link waves-light" mdbWavesEffect>Issues</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link waves-light" mdbWavesEffect>Boards</a>
+          </li>
+          <li *ngIf="this.securityService.getAuthLvl() >= 4" class="nav-item dropdown" dropdown>
+            <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+              Manage<span class="caret"></span></a>
+            <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+              <a class="dropdown-item waves-light" mdbWavesEffect href="#">Status</a>
+              <a class="dropdown-item waves-light" mdbWavesEffect href="#">Categorys</a>
+              <a class="dropdown-item waves-light" mdbWavesEffect href="#">Boards</a>
+              <div *ngIf="this.securityService.getAuthLvl() >= 7">
+                <div class="divider dropdown-divider"></div>
+                <a class="dropdown-item waves-light" mdbWavesEffect href="#">Users</a>
+                <a class="dropdown-item waves-light" mdbWavesEffect href="#">Groups</a>
+                <a *ngIf="this.securityService.getAuthLvl() >= 9" class="dropdown-item waves-light" mdbWavesEffect href="#">Server</a>
+                </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto nav-flex-icons">
+          <li class="nav-item">
+              <a class="nav-link">Logout</a>
+          </li>
+        </ul>
+    </links>
+  </mdb-navbar>

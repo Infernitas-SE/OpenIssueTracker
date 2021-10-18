@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OpenIssueTracker</name>
+    </assembly>
+    <members>
+        <member name="T:InfernitasSE.Projects.OpenIssueTracker.Backend.Controllers.SecurityController">
+            <summary>
+            Security Controller (User, IAM).
+            </summary>
+        </member>
+        <member name="M:InfernitasSE.Projects.OpenIssueTracker.Backend.Controllers.SecurityController.Login(InfernitasSE.Projects.OpenIssueTracker.Backend.Models.WebCredential)">
+            <summary>
+            Login EP.
+            </summary>
+            <param name="creds">Credentials</param>
+        </member>
+        <member name="M:InfernitasSE.Projects.OpenIssueTracker.Backend.Controllers.SecurityController.Logout">
+            <summary>
+            Logout EP
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:InfernitasSE.Projects.OpenIssueTracker.Backend.Controllers.SecurityController.IsAuthenticated">
+            <summary>
+            Check if User is Authenticated
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:InfernitasSE.Projects.OpenIssueTracker.Backend.Database.MsSqlContext">
+            <summary>
+            Microsoft SQL Database Context
+            </summary>
+        </member>
+        <member name="M:InfernitasSE.Projects.OpenIssueTracker.Backend.Database.MsSqlContext.#ctor">
+            <summary>
+            Constructor. 
+            </summary>
+        </member>
+        <member name="M:InfernitasSE.Projects.OpenIssueTracker.Backend.Database.MsSqlContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+            Model Configurator
+            </summary>
+            <param name="optionsBuilder"></param>
+        </member>
+        <member name="M:InfernitasSE.Projects.OpenIssueTracker.Backend.Database.MsSqlContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            Model Creator
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:InfernitasSE.Projects.OpenIssueTracker.Backend.Models.TableModel">
+            <summary>
+            Base-Class for all Table-related Models.
+            </summary>
+        </member>
+        <member name="P:InfernitasSE.Projects.OpenIssueTracker.Backend.Models.TableModel.Id">
+            <summary>
+            Primary Key in all Tables. 
+            </summary>
+        </member>
+        <member name="T:InfernitasSE.Projects.OpenIssueTracker.Backend.Models.User">
+            <summary>
+            User-Model.
+            </summary>
+        </member>
+        <member name="P:InfernitasSE.Projects.OpenIssueTracker.Backend.Models.User.Username">
+            <summary>
+            Username. (LDAP IAM)
+            </summary>
+        </member>
+        <member name="P:InfernitasSE.Projects.OpenIssueTracker.Backend.Models.User.Name">
+            <summary>
+            Name. 
+            </summary>
+        </member>
+        <member name="P:InfernitasSE.Projects.OpenIssueTracker.Backend.Models.User.Surname">
+            <summary>
+            Surname.
+            </summary>
+        </member>
+        <member name="T:InfernitasSE.Projects.OpenIssueTracker.Backend.Models.WebCredential">
+            <summary>
+            Web Credential Model
+            </summary>
+        </member>
+        <member name="P:InfernitasSE.Projects.OpenIssueTracker.Backend.Models.WebCredential.Username">
+            <summary>
+            Username.
+            </summary>
+        </member>
+        <member name="P:InfernitasSE.Projects.OpenIssueTracker.Backend.Models.WebCredential.Password">
+            <summary>
+            Password.
+            </summary>
+        </member>
+        <member name="M:InfernitasSE.Projects.OpenIssueTracker.Backend.Models.WebCredential.#ctor(System.String,System.String)">
+            <summary>
+            Constructor. 
+            </summary>
+            <param name="username">Username.</param>
+            <param name="password">Password.</param>
+        </member>
+        <member name="M:InfernitasSE.Projects.OpenIssueTracker.Backend.Models.WebCredential.#ctor">
+            <summary>
+            Constructor. 
+            </summary>
+        </member>
+        <member name="T:InfernitasSE.Projects.OpenIssueTracker.Backend.Program">
+            <summary>
+            Main Program Class.
+            </summary>
+        </member>
+        <member name="M:InfernitasSE.Projects.OpenIssueTracker.Backend.Program.Main(System.String[])">
+            <summary>
+            Main Method.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:InfernitasSE.Projects.OpenIssueTracker.Backend.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            Create HostBuilder-Object.,
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:InfernitasSE.Projects.OpenIssueTracker.Backend.Startup">
+            <summary>
+            Startup Class.
+            </summary>
+        </member>
+        <member name="M:InfernitasSE.Projects.OpenIssueTracker.Backend.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor. 
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:InfernitasSE.Projects.OpenIssueTracker.Backend.Startup.XmlCommentsFilePath">
+            <summary>
+            XML Configuration File Path.
+            </summary>
+        </member>
+        <member name="P:InfernitasSE.Projects.OpenIssueTracker.Backend.Startup.Configuration">
+            <summary>
+            Configuration from appsettings.*
+            </summary>
+        </member>
+        <member name="M:InfernitasSE.Projects.OpenIssueTracker.Backend.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configure Services.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:InfernitasSE.Projects.OpenIssueTracker.Backend.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            Configure App.
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>
